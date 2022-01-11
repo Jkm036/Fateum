@@ -1,0 +1,10 @@
+package com.fourTen;
+
+public class Screen {
+	public int[] pixels= new int[game.width*game.height];
+	
+	public Screen () {
+		
+	}
+	
+}

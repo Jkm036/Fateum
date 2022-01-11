@@ -1,0 +1,27 @@
+package com.fourTen;
+
+import com.fourTen.Sprite.Sprite;
+
+public class Screen {
+	int width;
+	int height;
+	public int[] pixels;
+	
+	public Screen (int width, int height) {
+		this.width=width;
+		this.height=height;	
+		pixels= new int[width*height];
+	}
+	
+	
+	public void renderSprite(int xp, int yp, int width, int height,Sprite sprite) {
+		for(int x=0;x<sprite.width;x++) {
+			for(int y=0;y<sprite.height;y++) {
+				int xx =xp+x;
+				int yy= yp+y;
+				pixels[xx+yy*this.width]=sprite.pixels[x+y*sprite.width];
+			}
+		}
+	
+}
+}

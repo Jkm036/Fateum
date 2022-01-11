@@ -1,0 +1,19 @@
+package com.fourTen;
+
+public class Screen {
+	int width;
+	int height;
+	public int[] pixels;
+	
+	public Screen (int width, int height) {
+		this.width=width;
+		this.height=height;	
+		pixels= new int[width*height];
+	}
+	
+	
+	public void renderSprite(int x, int y, int width, int height) {
+		
+	
+}
+}

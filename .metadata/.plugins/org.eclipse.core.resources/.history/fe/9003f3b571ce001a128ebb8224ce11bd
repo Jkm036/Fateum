@@ -1,0 +1,15 @@
+package com.fourTen;
+
+public class Level {
+	private int[] Tiles;
+	private int xScroll,yScroll;
+public void tick() {
+	
+}
+public void render(Screen screen, int xScroll, int yScroll) {
+	int x0=xScroll>>4;
+	int x1=xScroll+screen.width>>4;
+	int y0=yScroll>>4;
+	int y1=yScroll+screen.height>>4;
+}
+}

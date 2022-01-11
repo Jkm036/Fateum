@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.awt.Canvas"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="java.awt.Dimension"/>
+    <fullyQualifiedTypeName name="java.awt.image.BufferStrategy"/>
+    <fullyQualifiedTypeName name="java.awt.Graphics"/>
+    <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+    <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
+    <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+    <fullyQualifiedTypeName name="java.awt.event.MouseEvent"/>
+    <fullyQualifiedTypeName name="java.awt.event.MouseListener"/>
+    <fullyQualifiedTypeName name="java.awt.event.MouseMotionListener"/>
+    <fullyQualifiedTypeName name="com.fourTen.Inputs.Keyboard"/>
+    <fullyQualifiedTypeName name="com.fourTen.Inputs.Mouse"/>
+    <fullyQualifiedTypeName name="com.fourTen.Entity"/>
+    <fullyQualifiedTypeName name="com.fourTen.Screen"/>
+    <fullyQualifiedTypeName name="com.fourTen.Mob.Mob"/>
+    <fullyQualifiedTypeName name="com.fourTen.Mob.MainPlayer"/>
+    <fullyQualifiedTypeName name="com.fourTen.Event.MouseMoved"/>
+    <fullyQualifiedTypeName name="com.fourTen.Event.MousePressed"/>
+    <fullyQualifiedTypeName name="com.fourTen.Event.MouseReleased"/>
+    <fullyQualifiedTypeName name="com.fourTen.Event.ActionListener"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.fourTen.Event.Layer"/>
+    <fullyQualifiedTypeName name="com.fourTen.Event.Action"/>
+    <fullyQualifiedTypeName name="com.fourTen.Event.Action.Type"/>
+    <fullyQualifiedTypeName name="com.fourTen.Event.KeyPressed"/>
+    <fullyQualifiedTypeName name="com.fourTen.Event.KeyReleased"/>
+    <fullyQualifiedTypeName name="com.fourTen.Sprite"/>
+    <fullyQualifiedTypeName name="com.fourTen.Tiles.Tile"/>
+</qualifiedTypeNameHistroy>

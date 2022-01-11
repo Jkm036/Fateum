@@ -1,0 +1,13 @@
+package com.fourTen;
+
+import java.awt.Canvas;
+
+public class game extends Canvas implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

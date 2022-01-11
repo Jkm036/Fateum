@@ -1,0 +1,56 @@
+package com.fourTen;
+
+import java.awt.Canvas;
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+
+public class game extends Canvas implements Runnable {
+	JFrame frame;
+	public static int width=320*scale;
+	public static int height=width/12*9;
+	public static int scale=3;
+	Dimension dimension= new Dimension(width,height);
+	Thread thread;
+	public static boolean running;
+	public int ticks;
+	public int render;
+	
+	
+	public game() {
+		frame=new JFrame("Fateum");
+		frame.setSize(dimension);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null);
+		frame.add(this);
+		frame.setVisible(true);
+	}
+	
+	public void start() {
+		running=true;
+		thread=new Thread(this);
+		thread.start();
+	}
+
+	@Override
+	public void run() {
+		long startTime = System.nanoTime();
+		int nTIPT=(1000000000)/60;
+		while(running) {
+		long timeNow=System.nanoTime();
+		double nTintervals=(startTime-timeNow)/nTIPT;
+		 	while(nTintervals>0) {
+		 		nTintervals--;
+		 		ticks++;
+		 	}
+		 	startTime=timeNow;
+		 	System.out.println(ticks);
+		 	ticks=0;
+		}
+		
+	}
+	public static void main(String[]args) {
+	 game game =new game();
+	 game.start();
+	}
+}

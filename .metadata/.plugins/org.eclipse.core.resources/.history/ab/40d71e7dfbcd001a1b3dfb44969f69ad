@@ -1,0 +1,67 @@
+package com.fourTen;
+
+import java.awt.Canvas;
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+
+public class game extends Canvas implements Runnable {
+	JFrame frame;
+	public static int scale=3;
+	public static int width=320*scale;
+	public static int height=width/12*9;
+	Dimension dimension= new Dimension(width,height);
+	Thread thread;
+	public static boolean running;
+	
+	
+	public game() {
+		frame=new JFrame("Fateum");
+		frame.setSize(dimension);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null);
+		frame.add(this);
+		frame.setVisible(true);
+	}
+	
+	public void start() {
+		running=true;
+		thread=new Thread(this);
+		thread.start();
+	}
+
+	@Override
+	public void run() {
+		long startTime = System.nanoTime();
+		double TIPT=(1000000000.0)/60.0;
+		double nTintervals=0;
+		int ticks=0;
+	    int frames=0;
+	    long startMillis=System.currentTimeMillis();
+		
+		while(running) {
+		long timeNow=System.nanoTime();
+			nTintervals=(timeNow-startTime)/TIPT;
+
+		 	while(nTintervals>=1) {
+		 		ticks++;
+		 		nTintervals--;
+		 		//startTime needs to be here because otherwise double nTinntervals reaches its limit;/ becomes overwhelmed
+		 		startTime=timeNow;
+		 	}
+		 	frames++;
+		 	long nowMillis=System.currentTimeMillis();
+		 	if(nowMillis-startMillis>=1000) {
+		 				frame.setTitle("ticks: "+ticks+" frames: "+frames);
+		 				ticks=0;
+		 				frames=0;
+		 				startMillis=nowMillis;
+		 	}
+		}
+		
+	}
+	public static void main(String[]args) {
+	 game game =new game();
+	 game.start();
+	}
+}
